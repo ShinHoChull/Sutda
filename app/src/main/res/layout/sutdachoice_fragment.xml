@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="login"
+            type="com.yongchul.suitdagenealogy.views.SutdaChoiceFragment" />
+    </data>
+
+    <com.yongchul.suitdagenealogy.modules.customview.CustomView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yongchul.suitdagenealogy.modules.customview.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:h="40"
+            android:text="고르시오."
+            android:textColor="@color/main_color_black"
+            app:fontSize="17"
+
+            />
+
+        <com.yongchul.suitdagenealogy.modules.customview.CustomGridView
+            android:id="@+id/sutdaGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:numColumns="6"
+            android:verticalSpacing="1dp"
+            android:horizontalSpacing="1dp"
+            android:background="#C7C7C7"
+            />
+
+    </com.yongchul.suitdagenealogy.modules.customview.CustomView>
+
+
+
+
+</layout>

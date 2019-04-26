@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="main"
+            type="com.yongchul.suitdagenealogy.views.MainActivity" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.MainActivity"
+        android:background="@android:color/white">
+
+        <com.yongchul.suitdagenealogy.modules.customview.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.yongchul.suitdagenealogy.modules.customview.CustomTabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tab_layout"
+                app:h="50"
+                app:tabSelectedTextColor="@android:color/holo_green_dark"
+                app:tabTextColor="@android:color/darker_gray"
+                app:tabIndicatorColor="@android:color/holo_green_dark"
+                android:background="@color/main_color_white"
+                >
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab1" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab2" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab3" />
+
+            </com.yongchul.suitdagenealogy.modules.customview.CustomTabLayout>
+
+            <com.yongchul.suitdagenealogy.modules.customview.CustomFrameLayout
+                android:id="@+id/FragmentBor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:h="590"
+                android:background="@color/main_color_gray"
+                />
+
+        </com.yongchul.suitdagenealogy.modules.customview.CustomView>
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
