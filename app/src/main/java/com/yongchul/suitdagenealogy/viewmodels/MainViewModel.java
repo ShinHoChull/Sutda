@@ -43,6 +43,7 @@ public class MainViewModel implements TabLayout.OnTabSelectedListener {
     }
 
     private void changeFragment ( int pos) {
+
         if (fr != null) {
             fm.beginTransaction().remove(fr).commit();
         }
