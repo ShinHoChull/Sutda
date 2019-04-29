@@ -6,38 +6,47 @@
 
     <data>
         <variable
-            name="login"
+            name="Choice"
             type="com.yongchul.suitdagenealogy.views.SutdaChoiceFragment" />
     </data>
 
-    <com.yongchul.suitdagenealogy.modules.customview.CustomView
+    <com.yongchul.suitdagenealogy.modules.customview.CustomFrameLayout
+        android:id="@+id/sutdaFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.yongchul.suitdagenealogy.modules.customview.CustomTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:h="40"
-            android:text="고르시오."
-            android:textColor="@color/main_color_black"
-            app:fontSize="17"
-
-            />
-
-        <com.yongchul.suitdagenealogy.modules.customview.CustomGridView
-            android:id="@+id/sutdaGrid"
+        <com.yongchul.suitdagenealogy.modules.customview.CustomView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:numColumns="6"
-            android:verticalSpacing="1dp"
-            android:horizontalSpacing="1dp"
-            android:background="#C7C7C7"
-            />
+            android:orientation="vertical">
 
-    </com.yongchul.suitdagenealogy.modules.customview.CustomView>
+            <com.yongchul.suitdagenealogy.modules.customview.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:h="40"
+                android:text="고르시오."
+                android:textColor="@color/main_color_black"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:fontSize="17"
+                android:background="@color/main_color_white"
+                />
+
+            <com.yongchul.suitdagenealogy.modules.customview.CustomGridView
+                android:id="@+id/sutdaGrid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:numColumns="4"
+                android:overScrollMode="never"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="1dp"
+                />
+
+        </com.yongchul.suitdagenealogy.modules.customview.CustomView>
 
 
+    </com.yongchul.suitdagenealogy.modules.customview.CustomFrameLayout>
 
 
 </layout>

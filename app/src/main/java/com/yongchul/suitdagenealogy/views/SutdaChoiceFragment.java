@@ -11,17 +11,20 @@ import android.view.ViewGroup;
 
 import com.yongchul.suitdagenealogy.R;
 import com.yongchul.suitdagenealogy.databinding.SutdachoiceFragmentBinding;
+import com.yongchul.suitdagenealogy.viewmodels.ChoiceViewModel;
 
 public class SutdaChoiceFragment extends Fragment {
 
     SutdachoiceFragmentBinding binding;
+    ChoiceViewModel cvm;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         this.binding = DataBindingUtil.inflate(inflater, R.layout.sutdachoice_fragment,container,false);
-        //new AgendaViewModel(binding,getContext(),this.titleDTO);
+        this.binding.setChoice(this);
+        this.cvm = new ChoiceViewModel(this.binding,getContext());
 
         return this.binding.getRoot();
     }
