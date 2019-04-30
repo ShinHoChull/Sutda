@@ -7,23 +7,26 @@
     android:layout_height="match_parent"
     android:background="#CC000000"
     android:orientation="vertical"
+    android:gravity="center"
     >
 
     <com.yongchul.suitdagenealogy.modules.customview.CustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/main_color_white"
+        android:background="@drawable/pop_radius"
         android:gravity="center"
         android:layout_gravity="center"
-        app:h="200"
+        app:h="300"
         app:w="300">
 
         <com.yongchul.suitdagenealogy.modules.customview.CustomTextView
+            android:id="@+id/resultText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:h="40"
-            android:text="당신의 결과"
+            android:text=""
+            app:fontSize="17"
             android:textColor="@color/main_color_black"
             android:gravity="center"
             />
@@ -32,21 +35,30 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:h="260"
+            >
 
             <com.yongchul.suitdagenealogy.modules.customview.CustomImgView
                 android:id="@+id/subV_img1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                app:h="260"
+                />
 
             <com.yongchul.suitdagenealogy.modules.customview.CustomImgView
                 android:id="@+id/subV_img2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:paddingRight="20dp"
+                app:h="260"/>
 
         </com.yongchul.suitdagenealogy.modules.customview.CustomView>
 
