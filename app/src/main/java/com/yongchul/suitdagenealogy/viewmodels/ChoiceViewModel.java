@@ -57,7 +57,6 @@ public class ChoiceViewModel implements AdapterView.OnItemClickListener {
         this.biding.sutdaGrid.setAdapter(cga);
     }
 
-
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         view.setVisibility(View.INVISIBLE);
