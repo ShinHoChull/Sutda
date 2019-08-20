@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modules.common.IntroActivity">
+    tools:context=".modules.common.IntroActivity"
+    android:background="@color/main_color_white">
 
     <ImageView
         android:id="@+id/intro_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/intro"
-        android:scaleType="fitXY"
+        android:scaleType="fitCenter"
         />
 
 </android.support.constraint.ConstraintLayout>

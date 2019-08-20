@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:h="40"
-                android:text="고르시오."
+                android:text="내가 받은 패를 고르시오."
                 android:textColor="@color/main_color_black"
                 android:layout_gravity="center"
                 android:gravity="center"

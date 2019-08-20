@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="desc"
+            type="com.yongchul.suitdagenealogy.views.DescriptionFragment" />
+    </data>
+
+    <com.yongchul.suitdagenealogy.modules.customview.CustomFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/jogbo"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1위   삼팔광땡(최강)\n"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2위   일팔광땡(암행어사로 잡음 ,\n멍텅구리구사 재경기(구사는 안됨))\n"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3위   일삼광땡(암행어사로 잡음 ,\n멍텅구리구사 재경기(구사는 안됨))\n"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="******아래순위부터 구사재경기 가능******\n"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4위   10~1땡( 10 = 장땡 , 1 = 삥땡 ) \n숫자가 클수록 승리 ( 땡잡이 승리 )\n"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5위   알리"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6위 독사"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7위 구삥"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8위 장삥"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9위 장사"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10위 세륙"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11위 갑오"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12위 10~1끗(숫자가 클수록 승리)"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13위 망통(최고 꼴지)"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="**지역이나 게임하는 방식의 룰이 다를수있습니다."
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+
+
+        </LinearLayout>
+
+
+    </com.yongchul.suitdagenealogy.modules.customview.CustomFrameLayout>
+
+
+
+
+</layout>

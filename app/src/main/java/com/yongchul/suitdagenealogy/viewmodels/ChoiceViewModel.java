@@ -11,12 +11,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 import com.yongchul.suitdagenealogy.R;
 import com.yongchul.suitdagenealogy.databinding.ActivityMainBinding;
 import com.yongchul.suitdagenealogy.databinding.SutdachoiceFragmentBinding;
 import com.yongchul.suitdagenealogy.model.ShuitdaDTO;
 import com.yongchul.suitdagenealogy.modules.adapters.CustomGridViewAdapter;
 import com.yongchul.suitdagenealogy.modules.common.Globar;
+import com.yongchul.suitdagenealogy.modules.common.MyApp;
 import com.yongchul.suitdagenealogy.modules.common.Shuitda;
 
 import java.util.ArrayList;
@@ -32,7 +37,7 @@ public class ChoiceViewModel implements AdapterView.OnItemClickListener {
     private int card1,card2,r_img;
     private Shuitda shuitda;
     private String scoreName;
-
+    private InterstitialAd mInterstitialAd;
 
     public ChoiceViewModel(SutdachoiceFragmentBinding biding, Context c) {
         this.biding = biding;
@@ -49,6 +54,18 @@ public class ChoiceViewModel implements AdapterView.OnItemClickListener {
         this.shuitda = new Shuitda();
         this.listenerRegister();
         adapterReset();
+
+        MobileAds.initialize(this.c,this.c.getResources().getString(R.string.banner_ad_unit_id));
+
+        mInterstitialAd = new InterstitialAd(MyApp.getAppContext());
+        mInterstitialAd.setAdUnitId("ca-app-pub-6059452845900872/2772983148");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+        });
     }
 
     private void adapterReset () {
@@ -69,16 +86,25 @@ public class ChoiceViewModel implements AdapterView.OnItemClickListener {
     }
 
     private void setList(ShuitdaDTO sd) {
-        this.adCount++;
+
         this.slist.add(sd);
         Log.e("adCount", "" + this.adCount);
+
         if (this.slist.size() >= 2) {
+            this.adCount++;
             LayoutInflater inflater = (LayoutInflater)this.c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View v = inflater.inflate(R.layout.card_result , this.biding.sutdaFrame , false);
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(c,"hello!",Toast.LENGTH_SHORT).show();
+                    biding.sutdaFrame.removeView(v);
+                    if ( adCount == 2 || adCount == 5 || adCount == 8 || adCount == 12 || adCount == 16 || adCount == 18 || adCount == 25)  {
+                        if (mInterstitialAd.isLoaded()) {
+                            mInterstitialAd.show();
+                        } else {
+                            Log.d("TAG", "The interstitial wasn't loaded yet.");
+                        }
+                    }
                 }
             });
             ImageView img1 = v.findViewById(R.id.subV_img1);
@@ -95,7 +121,7 @@ public class ChoiceViewModel implements AdapterView.OnItemClickListener {
         }
     }
 
-    public int setting(int card , boolean state){
+    public int setting(int card , boolean state) {
 
         if(card == 1 && state == true){
             this.r_img = R.drawable.one;
@@ -176,7 +202,6 @@ public class ChoiceViewModel implements AdapterView.OnItemClickListener {
             case 10:
                 scoreName = shuitda.mix10(slist.get(0).isState(),slist.get(1).getName(),slist.get(1).isState());
                 break;
-
         }
 
         return scoreName;
